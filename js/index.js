@@ -70,7 +70,7 @@ function selectArea(btn) {
       <!-- --- Inputs -- -->
 
       <!-- --- Start Content -- -->
-      <div class="content-area pt-5 mt-5" id="contentArea">
+      <div class="content-area pt-3 my-3" id="contentArea">
       </div>
       `);
 
