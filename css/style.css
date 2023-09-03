@@ -1,0 +1,183 @@
+/* --------------------global-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* scroll-padding-top: 7.5em !important; */
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+body {
+  background-color: #110d0d;
+  color: #f9f6f6 !important;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: white;
+}
+.cp {
+    cursor: pointer !important;
+}
+.lh {
+    line-height: 0 !important;
+}
+.z-top {
+    z-index: 99999 !important;
+}
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track {
+    background-color: #444;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #111;
+}
+/*---------------- end-global--------------- */
+
+/* =========start-loading-page========== */
+/* .loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #de3500;
+  transform: rotateX(65deg) rotate(45deg);
+  // remove bellows command for perspective change
+  //transform: perspective(200px) rotateX(65deg) rotate(45deg);
+  color: #fff;
+  animation: layers1 1s linear infinite alternate;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  animation: layerTr 1s linear infinite alternate;
+}
+
+@keyframes layers1 {
+  0% {
+    box-shadow: 0px 0px 0 0px;
+  }
+  90%,
+  100% {
+    box-shadow: 20px 20px 0 -4px;
+  }
+}
+@keyframes layerTr {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-25px, -25px) scale(1);
+  }
+}
+
+/* ===========end-loading-page================== */
+
+
+/* ----------------  Start Aside ------------------*/
+aside {
+  min-height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  left: -260px;
+  top: 0;
+  background-color: #000;
+}
+.aside-data {
+  width: 260px;
+}
+.aside-links {
+  overflow: hidden;
+  height: 320px;
+}
+.aside-links li {
+  padding-top: 500px;
+  cursor: pointer;
+}
+.aside-links a:hover {
+  color: #ff3d00;
+}
+.aside-links a.active {
+  color: #ff3d00 !important;
+}
+aside .right-icons {
+  padding: 10px;
+}
+aside img {
+  width: 50px;
+}
+
+/* ===============End Aside ==================*/
+
+/*================== Start Content ============*/
+
+.content .form-control,
+.content .form-control:focus {
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.item {
+  overflow: hidden;
+}
+.layer {
+  top: 200%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.item:hover .layer {
+  top: 0;
+  transition-duration:0.5s;
+}
+
+/*================= End Content============= */
+
+
+
+/*================== Start Contact===================  */
+
+form .form-control,
+form .form-control:focus {
+  background-color: white;
+  border:1px solid rgb(202, 200, 200)!important;
+  color:white;
+}
+.succes {
+  border-bottom: 1px solid rgb(33, 243, 18) !important;
+}
+.error {
+  border-bottom: 1px solid rgb(242, 49, 15) !important;
+}
+/*===================== End Contact ======================= */
